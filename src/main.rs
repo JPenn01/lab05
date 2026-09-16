@@ -1,3 +1,9 @@
+use std::io;
+
 fn main() {
-    println!("Hello, world!");
+    
 }
+
+// Jayden
+// is_even()
+// digit_sum()
