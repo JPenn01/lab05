@@ -1,3 +1,28 @@
+fn is_even(n: i32) -> bool {
+    n % 2 == 0
+}
+
+fn digit_sum(mut n: i32) -> i32 {
+    let mut sum = 0;
+    while n > 0 {
+        sum += n % 10;
+        n /= 10;
+    }
+    sum
+}
+
+fn is_prime(n: i32) -> bool {
+    if n <= 1 {
+        return false;
+    }
+    for i in 2..n {
+        if n % i == 0 {
+            return false;
+        }
+    }
+    true
+}
+
 fn main() {
-    println!("Hello, world!");
+    println!("is_prime(5) = {}", is_prime(5));
 }
