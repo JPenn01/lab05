@@ -1,11 +1,11 @@
 use std::io;
 
 fn read_i32(prompt: &str) -> i32 {
-    println!("Enter number");
+    println!("{prompt}");
     let mut input = String::new();
     io::stdin().read_line(&mut input).expect("Failed to read line");
-    input.trim().parse().expect("Not a valid number");
-
+    input.trim().parse().expect("Not a valid number")
+}
 fn is_even(n: i32) -> bool {
     n % 2 == 0
 }
@@ -40,7 +40,7 @@ fn count_divisors(n: i32) -> i32 {
     }
     count
 }
-fn main {
+fn main() {
     let start = read_i32("Start of range:");
 let end = read_i32("End of range:");
 for n in start..=end {
@@ -49,5 +49,4 @@ for n in start..=end {
         is_even(n), digit_sum(n), is_prime(n), count_divisors(n)
     );
 }          
-}
 }
